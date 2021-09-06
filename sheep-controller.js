@@ -9,6 +9,7 @@ export class SheepController{
             this.loaded();
         }
         this.img.src = 'sheep.png';
+        this.sheep = new Sheep();
 
         this.items = [];
 
@@ -23,7 +24,7 @@ export class SheepController{
 
     loaded(){
         this.isLoaded = true;
-        this.addSheep();
+        this.addSheep(); 
     }
 
     addSheep(){
@@ -46,8 +47,7 @@ export class SheepController{
                     this.items.splice(i, 1);
                 }else{
                     item.draw(ctx, t, dots);
-                }
-                
+                }                
             }
         }
     }
